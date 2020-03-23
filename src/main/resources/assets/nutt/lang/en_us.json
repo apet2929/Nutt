@@ -1,0 +1,12 @@
+{
+  "block.nutt.firstblock": "First Block",
+  "item.nutt.firstitem": "First Item",
+  "item.nutt.pistachio_nut": "Pistachio",
+  "item.nutt.almond_nut": "Almond",
+  "item.nutt.macadamia_nut": "Macadamia",
+  "item.nutt.peanut_nut": "Peanut",
+  "item.nutt.cashew_nut": "Cashew",
+
+  "_comment": "Creative Tabs",
+  "itemGroup.nutt": "Nutt"
+}
