@@ -9,6 +9,7 @@ public class Macadamia_Nut extends Item {
         super(new Item.Properties()
                 .food(ModFoods.macadamia)
                 .group(setup.itemGroup)
+
         );
         setRegistryName("macadamia_nut");
 

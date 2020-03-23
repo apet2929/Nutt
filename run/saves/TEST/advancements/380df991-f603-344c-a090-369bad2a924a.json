@@ -1,13 +1,79 @@
 {
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "has_planks": "2020-03-23 18:17:04 -0500"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/root": {
+    "criteria": {
+      "consumed_item": "2020-03-23 15:44:59 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/spruce_sign": {
+    "criteria": {
+      "has_spruce_planks": "2020-03-23 18:17:04 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/spruce_fence": {
+    "criteria": {
+      "has_planks": "2020-03-23 18:17:04 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/spruce_slab": {
+    "criteria": {
+      "has_planks": "2020-03-23 18:17:04 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/spruce_button": {
+    "criteria": {
+      "has_planks": "2020-03-23 18:17:04 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/barrel": {
+    "criteria": {
+      "has_planks": "2020-03-23 18:17:04 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/spruce_door": {
+    "criteria": {
+      "has_planks": "2020-03-23 18:17:04 -0500"
+    },
+    "done": true
+  },
   "minecraft:husbandry/balanced_diet": {
     "criteria": {
       "rotten_flesh": "2020-03-23 15:44:59 -0500"
     },
     "done": false
   },
-  "minecraft:husbandry/root": {
+  "minecraft:recipes/redstone/spruce_pressure_plate": {
     "criteria": {
-      "consumed_item": "2020-03-23 15:44:59 -0500"
+      "has_planks": "2020-03-23 18:17:04 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/stick": {
+    "criteria": {
+      "has_planks": "2020-03-23 18:17:04 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/spruce_fence_gate": {
+    "criteria": {
+      "has_planks": "2020-03-23 18:17:04 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/spruce_stairs": {
+    "criteria": {
+      "has_planks": "2020-03-23 18:17:04 -0500"
     },
     "done": true
   },
@@ -16,6 +82,12 @@
       "minecraft:plains": "2020-03-23 14:55:21 -0500"
     },
     "done": false
+  },
+  "minecraft:recipes/redstone/spruce_trapdoor": {
+    "criteria": {
+      "has_planks": "2020-03-23 18:17:04 -0500"
+    },
+    "done": true
   },
   "DataVersion": 2230
 }
