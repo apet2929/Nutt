@@ -1,8 +1,8 @@
-package com.MoonJew.nutt.items;
+package com.moonjew.nutt.items;
 
 import net.minecraft.item.Item;
 
-import static com.MoonJew.nutt.Nutt.setup;
+import static com.moonjew.nutt.Nutt.setup;
 
 public class Cashew_Nut extends Item {
     public Cashew_Nut(){

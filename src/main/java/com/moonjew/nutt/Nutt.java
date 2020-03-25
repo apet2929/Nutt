@@ -1,13 +1,13 @@
-package com.MoonJew.nutt;
+package com.moonjew.nutt;
 
-import com.MoonJew.nutt.blocks.*;
+import com.moonjew.nutt.blocks.*;
 //import com.MoonJew.nutt.blocks.FirstBlockTile;
 //import com.MoonJew.nutt.items.FirstItem;
-import com.MoonJew.nutt.items.*;
-import com.MoonJew.nutt.setup.ClientProxy;
-import com.MoonJew.nutt.setup.IProxy;
-import com.MoonJew.nutt.setup.ModSetup;
-import com.MoonJew.nutt.setup.ServerProxy;
+import com.moonjew.nutt.items.*;
+import com.moonjew.nutt.setup.ClientProxy;
+import com.moonjew.nutt.setup.IProxy;
+import com.moonjew.nutt.setup.ModSetup;
+import com.moonjew.nutt.setup.ServerProxy;
 import net.minecraft.block.Block;
 import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.item.BlockItem;
@@ -50,7 +50,6 @@ public class Nutt
     public static class RegistryEvents {
         @SubscribeEvent
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> event) {
-            event.getRegistry().register(new FirstBlock());
             event.getRegistry().register(new NutGrinder());
             event.getRegistry().register(new NutDryer());
         }
@@ -81,10 +80,11 @@ public class Nutt
                     IForgeContainerType.create(
                             (windowId, inv, data) -> {
                                 BlockPos pos = data.readBlockPos();
-                                return new NutGrinderContainer(windowId, pos, Nutt.proxy.getClientWorld(), inv, proxy.getClientPlayer());
+                                return new NutGrinderContainer(windowId, Nutt.proxy.getClientWorld(), pos, inv, proxy.getClientPlayer());
                             }).setRegistryName("nutgrinder")
             );
         }
 
     }
 }
+//Fuck you github

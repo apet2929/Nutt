@@ -1,7 +1,5 @@
-package com.MoonJew.nutt.items;
+package com.moonjew.nutt.items;
 
-import net.minecraft.item.Food;
-import net.minecraft.item.Item;
 import net.minecraftforge.registries.ObjectHolder;
 
 public class ModItems {

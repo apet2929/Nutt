@@ -1,4 +1,4 @@
-package com.MoonJew.nutt.blocks;
+package com.moonjew.nutt.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;

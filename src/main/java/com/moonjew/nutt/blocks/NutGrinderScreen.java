@@ -1,6 +1,6 @@
-package com.MoonJew.nutt.blocks;
+package com.moonjew.nutt.blocks;
 
-import com.MoonJew.nutt.Nutt;
+import com.moonjew.nutt.Nutt;
 import com.mojang.blaze3d.platform.GlStateManager;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.entity.player.PlayerInventory;
@@ -26,18 +26,18 @@ public class NutGrinderScreen extends ContainerScreen<NutGrinderContainer> {
      * Draw the foreground layer for the GuiContainer (everything in front of the items)
      */
     protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-        this.font.drawString(this.title.getFormattedText(), 8.0F, 6.0F, 4210752);
-        this.font.drawString(this.playerInventory.getDisplayName().getFormattedText(), 8.0F, (float)(this.ySize - 96 + 2), 4210752);
+
     }
 
     /**
      * Draws the background layer of this container (behind the items).
      */
     protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY) {
-        GlStateManager.func_227702_d_(1.0F, 1.0F, 1.0F, 1.0F); //color4f => func_227702_d_
+        GlStateManager.func_227702_d_(1.0F, 1.0F, 1.0F, 1.0F); //color4f() => func_227702_d_()
         this.minecraft.getTextureManager().bindTexture(GUI);
         int relX = (this.width - this.xSize) / 2;
         int relY = (this.height - this.ySize) / 2;
         this.blit(relX, relY, 0, 0, this.xSize, this.ySize);
     }
 }
+//Fuck you github

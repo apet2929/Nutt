@@ -1,7 +1,6 @@
-package com.MoonJew.nutt.items;
+package com.moonjew.nutt.items;
 
 import net.minecraft.item.Food;
-import net.minecraft.potion.Effect;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 

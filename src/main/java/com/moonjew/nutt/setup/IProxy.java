@@ -1,4 +1,4 @@
-package com.MoonJew.nutt.setup;
+package com.moonjew.nutt.setup;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.world.World;

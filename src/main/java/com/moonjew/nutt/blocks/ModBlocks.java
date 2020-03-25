@@ -1,4 +1,4 @@
-package com.MoonJew.nutt.blocks;
+package com.moonjew.nutt.blocks;
 
 import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.tileentity.TileEntityType;
@@ -6,7 +6,7 @@ import net.minecraftforge.registries.ObjectHolder;
 
 public class ModBlocks {
     @ObjectHolder("nutt:firstblock")
-    public static FirstBlock FIRSTBLOCK;
+    public static NutGrinder FIRSTBLOCK;
     @ObjectHolder("nutt:nutgrinder")
     public static NutGrinder NUTGRINDER;
     @ObjectHolder("nutt:nutgrinder")

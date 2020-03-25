@@ -1,7 +1,7 @@
-package com.MoonJew.nutt.setup;
+package com.moonjew.nutt.setup;
 
-import com.MoonJew.nutt.blocks.ModBlocks;
-import com.MoonJew.nutt.blocks.NutGrinderScreen;
+import com.moonjew.nutt.blocks.ModBlocks;
+import com.moonjew.nutt.blocks.NutGrinderScreen;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.entity.player.PlayerEntity;
@@ -23,3 +23,4 @@ public class ClientProxy implements IProxy{
         return Minecraft.getInstance().player;
     }
 }
+//Fuck you github

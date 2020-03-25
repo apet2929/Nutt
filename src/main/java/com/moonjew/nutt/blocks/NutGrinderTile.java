@@ -1,4 +1,4 @@
-package com.MoonJew.nutt.blocks;
+package com.moonjew.nutt.blocks;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
@@ -7,7 +7,6 @@ import net.minecraft.inventory.container.INamedContainerProvider;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.nbt.INBT;
 import net.minecraft.tileentity.ITickableTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Direction;
@@ -23,7 +22,7 @@ import net.minecraftforge.items.ItemStackHandler;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
-import static com.MoonJew.nutt.blocks.ModBlocks.NUTGRINDER_TILE;
+import static com.moonjew.nutt.blocks.ModBlocks.NUTGRINDER_TILE;
 
 public class NutGrinderTile extends TileEntity implements ITickableTileEntity, INamedContainerProvider {
 
@@ -88,6 +87,7 @@ public class NutGrinderTile extends TileEntity implements ITickableTileEntity, I
     @Nullable
     @Override
     public Container createMenu(int i, PlayerInventory playerInventory, PlayerEntity playerEntity) {
-        return new NutGrinderContainer(i, pos, world, playerInventory, playerEntity);
+        return new NutGrinderContainer(i, world, pos, playerInventory, playerEntity);
     }
 }
+//Fuck you github

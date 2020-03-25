@@ -1,6 +1,6 @@
-package com.MoonJew.nutt.setup;
+package com.moonjew.nutt.setup;
 
-import com.MoonJew.nutt.blocks.ModBlocks;
+import com.moonjew.nutt.blocks.ModBlocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 
