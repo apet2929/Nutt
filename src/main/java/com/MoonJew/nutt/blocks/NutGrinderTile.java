@@ -1,5 +1,9 @@
 package com.MoonJew.nutt.blocks;
 
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.inventory.container.Container;
+import net.minecraft.inventory.container.INamedContainerProvider;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.CompoundNBT;
@@ -7,6 +11,8 @@ import net.minecraft.nbt.INBT;
 import net.minecraft.tileentity.ITickableTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Direction;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.StringTextComponent;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.util.INBTSerializable;
 import net.minecraftforge.common.util.LazyOptional;
@@ -19,7 +25,7 @@ import javax.annotation.Nullable;
 
 import static com.MoonJew.nutt.blocks.ModBlocks.NUTGRINDER_TILE;
 
-public class NutGrinderTile extends TileEntity implements ITickableTileEntity {
+public class NutGrinderTile extends TileEntity implements ITickableTileEntity, INamedContainerProvider {
 
     private LazyOptional<IItemHandler> handler = LazyOptional.of(this::createHandler);
     public NutGrinderTile(){
@@ -65,7 +71,6 @@ public class NutGrinderTile extends TileEntity implements ITickableTileEntity {
         };
     }
 
-
     @Nonnull
     @Override
     public <T> LazyOptional<T> getCapability(@Nonnull Capability<T> cap, @Nullable Direction side) {
@@ -73,5 +78,16 @@ public class NutGrinderTile extends TileEntity implements ITickableTileEntity {
             return handler.cast();
         }
         return super.getCapability(cap, side);
+    }
+
+    @Override
+    public ITextComponent getDisplayName() {
+        return new StringTextComponent(getType().getRegistryName().getPath());
+    }
+
+    @Nullable
+    @Override
+    public Container createMenu(int i, PlayerInventory playerInventory, PlayerEntity playerEntity) {
+        return new NutGrinderContainer(i, pos, world, playerInventory, playerEntity);
     }
 }

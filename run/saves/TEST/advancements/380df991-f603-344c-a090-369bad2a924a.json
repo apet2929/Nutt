@@ -35,9 +35,21 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/polished_diorite_stairs_from_diorite_stonecutting": {
+    "criteria": {
+      "has_diorite": "2020-03-25 15:19:00 -0500"
+    },
+    "done": true
+  },
   "minecraft:recipes/redstone/spruce_door": {
     "criteria": {
       "has_planks": "2020-03-23 18:17:04 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/diamond_axe": {
+    "criteria": {
+      "has_diamond": "2020-03-25 15:24:03 -0500"
     },
     "done": true
   },
@@ -80,6 +92,18 @@
   "minecraft:recipes/building_blocks/purple_stained_glass": {
     "criteria": {
       "has_glass": "2020-03-24 13:27:04 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/stripped_acacia_wood": {
+    "criteria": {
+      "has_log": "2020-03-25 15:30:10 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_diorite_slab_from_polished_diorite_stonecutting": {
+    "criteria": {
+      "has_polished_diorite": "2020-03-25 15:19:00 -0500"
     },
     "done": true
   },
@@ -131,6 +155,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/combat/diamond_sword": {
+    "criteria": {
+      "has_diamond": "2020-03-25 15:24:03 -0500"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/blue_stained_glass": {
     "criteria": {
       "has_glass": "2020-03-24 13:27:04 -0500"
@@ -158,6 +188,12 @@
   "minecraft:recipes/transportation/spruce_boat": {
     "criteria": {
       "in_water": "2020-03-24 13:32:53 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/jukebox": {
+    "criteria": {
+      "has_diamond": "2020-03-25 15:24:03 -0500"
     },
     "done": true
   },
@@ -287,6 +323,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/polished_diorite_slab_from_diorite_stonecutting": {
+    "criteria": {
+      "has_diorite": "2020-03-25 15:19:00 -0500"
+    },
+    "done": true
+  },
   "minecraft:recipes/redstone/spruce_pressure_plate": {
     "criteria": {
       "has_planks": "2020-03-23 18:17:04 -0500"
@@ -329,6 +371,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/acacia_planks": {
+    "criteria": {
+      "has_logs": "2020-03-25 15:20:13 -0500"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/yellow_stained_glass": {
     "criteria": {
       "has_glass": "2020-03-24 13:27:04 -0500"
@@ -344,6 +392,12 @@
   "minecraft:recipes/redstone/oak_button": {
     "criteria": {
       "has_planks": "2020-03-24 13:25:07 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/diamond_chestplate": {
+    "criteria": {
+      "has_diamond": "2020-03-25 15:24:03 -0500"
     },
     "done": true
   },
@@ -395,6 +449,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/combat/diamond_leggings": {
+    "criteria": {
+      "has_diamond": "2020-03-25 15:24:03 -0500"
+    },
+    "done": true
+  },
   "minecraft:recipes/misc/charcoal": {
     "criteria": {
       "has_log": "2020-03-24 13:25:08 -0500"
@@ -404,6 +464,12 @@
   "minecraft:recipes/building_blocks/red_stained_glass": {
     "criteria": {
       "has_glass": "2020-03-24 13:27:04 -0500"
+    },
+    "done": true
+  },
+  "minecraft:adventure/sleep_in_bed": {
+    "criteria": {
+      "slept_in_bed": "2020-03-25 15:34:51 -0500"
     },
     "done": true
   },
@@ -452,6 +518,12 @@
   "minecraft:recipes/building_blocks/oak_stairs": {
     "criteria": {
       "has_planks": "2020-03-24 13:25:07 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_diorite_slab": {
+    "criteria": {
+      "has_polished_diorite": "2020-03-25 15:19:00 -0500"
     },
     "done": true
   },
@@ -539,6 +611,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/diamond_block": {
+    "criteria": {
+      "has_diamond": "2020-03-25 15:24:03 -0500"
+    },
+    "done": true
+  },
   "minecraft:recipes/tools/stone_hoe": {
     "criteria": {
       "has_cobblestone": "2020-03-24 12:46:27 -0500"
@@ -557,6 +635,18 @@
     },
     "done": true
   },
+  "minecraft:recipes/tools/diamond_pickaxe": {
+    "criteria": {
+      "has_diamond": "2020-03-25 15:24:03 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/diamond_hoe": {
+    "criteria": {
+      "has_diamond": "2020-03-25 15:24:03 -0500"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/red_stained_glass_pane": {
     "criteria": {
       "has_glass": "2020-03-24 13:27:04 -0500"
@@ -566,6 +656,12 @@
   "minecraft:recipes/decorations/white_stained_glass_pane": {
     "criteria": {
       "has_glass": "2020-03-24 13:27:04 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/diamond_shovel": {
+    "criteria": {
+      "has_diamond": "2020-03-25 15:24:03 -0500"
     },
     "done": true
   },
@@ -611,6 +707,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/polished_diorite_stairs_from_polished_diorite_stonecutting": {
+    "criteria": {
+      "has_polished_diorite": "2020-03-25 15:19:00 -0500"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/brown_stained_glass_pane": {
     "criteria": {
       "has_glass": "2020-03-24 13:27:04 -0500"
@@ -623,9 +725,33 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/polished_diorite_stairs": {
+    "criteria": {
+      "has_polished_diorite": "2020-03-25 15:19:00 -0500"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/magenta_stained_glass": {
     "criteria": {
       "has_glass": "2020-03-24 13:27:04 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/diamond_boots": {
+    "criteria": {
+      "has_diamond": "2020-03-25 15:24:03 -0500"
+    },
+    "done": true
+  },
+  "minecraft:story/mine_diamond": {
+    "criteria": {
+      "diamond": "2020-03-25 15:24:03 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/diamond_helmet": {
+    "criteria": {
+      "has_diamond": "2020-03-25 15:24:03 -0500"
     },
     "done": true
   },

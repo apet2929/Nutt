@@ -1,5 +1,6 @@
 package com.MoonJew.nutt.blocks;
 
+import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.registries.ObjectHolder;
 
@@ -10,6 +11,8 @@ public class ModBlocks {
     public static NutGrinder NUTGRINDER;
     @ObjectHolder("nutt:nutgrinder")
     public static TileEntityType<NutGrinderTile> NUTGRINDER_TILE;
+    @ObjectHolder("nutt:nutgrinder")
+    public static ContainerType<NutGrinderContainer> NUTGRINDER_CONTAINER;
     @ObjectHolder("nutt:nutdryer")
     public static NutDryer NUTDRYER;
 
