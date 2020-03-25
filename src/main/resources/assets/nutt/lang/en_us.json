@@ -6,6 +6,8 @@
   "item.nutt.macadamia_nut": "Macadamia",
   "item.nutt.peanut_nut": "Peanut",
   "item.nutt.cashew_nut": "Cashew",
+  "block.nutt.nutgrinder": "Nut Grinder",
+  "block.nutt.nutdryer": "Nut Dryer",
 
   "_comment": "Creative Tabs",
   "itemGroup.nutt": "Nutt"

@@ -1,0 +1,84 @@
+Modding Notes:
+Folders required:
+-ModName
+    -src
+        -main
+            -java
+                -com
+                    -Creator Name
+                        -modname
+                            -blocks
+                            -items
+                            -setup
+                -resources
+                    -assets
+                        -modname
+                            -blockstates
+                            -lang
+                            -models
+                                -block
+                                -item
+                            -textures
+                                -block
+                                -item
+
+
+WHEN DEBUGGING: Things to look out for
+-Files are in the correct folders, folders are in the correct spot
+-Trailing commas
+-Typos
+-Things named incorrectly
+-If texture isnt loading,
+    -In models and blockstates, make sure the directions are named the same thing, and that they line up
+
+How to make block, step by step
+    1) Create block class inside (com/creatorname/modid/blocks)
+    2) Register block in the mod class with a block and an item (com/creatorname/modid/modid.java)
+    3) Instantiate a static block variable in the ModBlocks class (com/creatorname/modid/blocks/ModBlocks.java)
+
+    Now, here you can already access your block. Try it!
+
+    4) Create a blockstates .json for the block named block registry name (resources/assets/modid/blockstates)
+    5) Create a model for the block named block unlocalized name (resources/assets/modid/models/block)
+    6) Create a third and final .json for the block named block name (resources/assets/modid/models/item)
+    7) Add the texture (resources/assets/modid/textures/block)
+
+    Now the block should have a texture. Test again.
+
+    8) Make a loot table so that it drops when destroyed (resources/data/modid/loot_tables/blocks)
+    9) Set the displayed name in the language file (assets/modid/lang)
+    10) Set the item recipe (resources/data/modid/recipes)
+    11) Add it to the creative tab (com/creatorname/modid/modid.java)
+
+How to make an item, step by step
+    1) Make the item class (creatorname/modid/items)
+    2) Register it in item registry (com/creatorname/modid/modid.java)
+    3) Register it in the ModItems class (com/creator/modid/items)
+
+    Now the item should now appear in game
+
+    4) Set the model (resources/assets/modid/models/item)
+    5) Add a texture (resources/assets/modid/textures/item) Make sure the designated texture name is the same as the .png name for the texture
+    6) Add it in the language file
+
+    Now it should have a texture
+
+    7) Add a recipe
+    8) Make a loot table
+    9) Set the displayed name
+    10) Add it to the creative tab
+
+How to make a tile entity for a block, step by step
+    1) Make a tile entity class for it (com/creatorname/modid/blocks)
+    2) Make a static variable for it in the ModBlocks class (com/creatorname/modid/blocks/ModBlocks.java)
+    3) Register it in the TileEntity registry in the mod class (com/creatorname/modid/modid.java)
+    4) Override hasTileEntity and createTileEntity in the block class (com/creatorname/modid/blocks)
+
+How to make a food item, step by step
+    1) Make an item class
+ADVANCED:
+    How to make a block face the direction a player is facing:
+        -Add methods onBlockPlacedBy, getFacingFromEntity, and fillStateContainer in the Block Class
+        -Only needed if the block has sides that are not all the same (blockstates isnt 1 line)
+
+
