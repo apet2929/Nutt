@@ -4,6 +4,7 @@ Different nuts
     -Nut grinder, you put nuts in and it grinds them, but out pops nut oil, which is used to infuse/breed the nuts
     -Cooking the nuts removes effects but restores more hunger
     -Nut Dryer, drys nuts removing any hunger but amplifying effects
+	-Mr Buhot as an Iron Golem
 
 Penis Mod:
 -Giant Trump Penis
