@@ -11,7 +11,7 @@ public class ServerProxy implements IProxy{
 
     @Override
     public void init() {
-
+        System.out.println("init() called (ServerProxy.java)");
     }
 
     @Override

@@ -13,6 +13,7 @@ public class NutGrinderScreen extends ContainerScreen<NutGrinderContainer> {
 
     public NutGrinderScreen(NutGrinderContainer container, PlayerInventory inv, ITextComponent name) {
         super(container, inv, name);
+        System.out.println("Nut Grinder Screen instantiated (NutGrinderScreen.java)");
     }
 
     @Override
@@ -33,7 +34,7 @@ public class NutGrinderScreen extends ContainerScreen<NutGrinderContainer> {
      * Draws the background layer of this container (behind the items).
      */
     protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY) {
-        GlStateManager.func_227702_d_(1.0F, 1.0F, 1.0F, 1.0F); //color4f() => func_227702_d_()
+        GlStateManager.color4f(1.0F, 1.0F, 1.0F, 1.0F); //color4f() => func_227702_d_()
         this.minecraft.getTextureManager().bindTexture(GUI);
         int relX = (this.width - this.xSize) / 2;
         int relY = (this.height - this.ySize) / 2;

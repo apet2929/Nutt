@@ -12,7 +12,10 @@ import net.minecraft.block.Block;
 import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntityType;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.common.extensions.IForgeContainerType;
 import net.minecraftforge.event.RegistryEvent;
@@ -28,7 +31,10 @@ import org.apache.logging.log4j.Logger;
 @Mod("nutt")
 public class Nutt
 {
+
     public static final String MODID = "nutt";
+
+
     public static IProxy proxy = DistExecutor.runForDist(() -> () -> new ClientProxy(), () -> () -> new ServerProxy());
     public static ModSetup setup = new ModSetup();
     public static ModFoods modFoods = new ModFoods();
@@ -52,12 +58,13 @@ public class Nutt
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> event) {
             event.getRegistry().register(new NutGrinder());
             event.getRegistry().register(new NutDryer());
+
         }
         @SubscribeEvent
         public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
-            Item.Properties properties = new Item.Properties()
-                    .group(setup.itemGroup);
-            event.getRegistry().register(new BlockItem(ModBlocks.FIRSTBLOCK, properties).setRegistryName("firstblock"));
+//            Item.Properties properties = new Item.Properties().group(itemGroup);
+
+            event.getRegistry().register(new BlockItem(ModBlocks.FIRSTBLOCK, new Item.Properties()).setRegistryName("firstblock"));
             event.getRegistry().register(new FirstItem());
 
             event.getRegistry().register(new Pistachio_Nut());
@@ -66,13 +73,15 @@ public class Nutt
             event.getRegistry().register(new Cashew_Nut());
             event.getRegistry().register(new Almond_Nut());
 
-            event.getRegistry().register(new BlockItem(ModBlocks.NUTGRINDER, properties).setRegistryName("nutgrinder"));
-            event.getRegistry().register(new BlockItem(ModBlocks.NUTDRYER, properties).setRegistryName("nutdryer"));
+            event.getRegistry().register(new BlockItem(ModBlocks.NUTGRINDER, new Item.Properties()).setRegistryName("nutgrinder"));
+            event.getRegistry().register(new BlockItem(ModBlocks.NUTDRYER, new Item.Properties()).setRegistryName("nutdryer"));
 
         }
+
         @SubscribeEvent
         public static void onTileEntityRegistry(final RegistryEvent.Register<TileEntityType<?>> event) {
             event.getRegistry().register(TileEntityType.Builder.create(NutGrinderTile::new, ModBlocks.NUTGRINDER).build(null).setRegistryName("nutgrinder"));
+
         }
         @SubscribeEvent
         public static void onContainerRegistry(final RegistryEvent.Register<ContainerType<?>> event){
@@ -83,6 +92,7 @@ public class Nutt
                                 return new NutGrinderContainer(windowId, Nutt.proxy.getClientWorld(), pos, inv, proxy.getClientPlayer());
                             }).setRegistryName("nutgrinder")
             );
+
         }
 
     }

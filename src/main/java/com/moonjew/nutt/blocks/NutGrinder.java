@@ -33,6 +33,7 @@ public class NutGrinder extends Block {
                 .lightValue(14)
         );
         setRegistryName("nutgrinder");
+
     }
 
     @Override
@@ -55,7 +56,7 @@ public class NutGrinder extends Block {
     }
 
     @Override
-    public ActionResultType func_225533_a_(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockRayTraceResult result) {
+    public ActionResultType onBlockActivated(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockRayTraceResult result) {
         if (world.isRemote) {
             return ActionResultType.SUCCESS;
         } else {

@@ -16,10 +16,12 @@ public class ClientProxy implements IProxy{
     @Override
     public void init() {
         ScreenManager.registerFactory(ModBlocks.NUTGRINDER_CONTAINER, NutGrinderScreen::new); //Couples Container to GUI on client
+        System.out.println("init() called (ClientProxy.java)");
     }
 
     @Override
     public PlayerEntity getClientPlayer() {
+        System.out.println("getClientPlayer() called (ClientProxy.java)");
         return Minecraft.getInstance().player;
     }
 }

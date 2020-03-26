@@ -22,6 +22,8 @@ import net.minecraftforge.items.ItemStackHandler;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
+
+
 import static com.moonjew.nutt.blocks.ModBlocks.NUTGRINDER_TILE;
 
 public class NutGrinderTile extends TileEntity implements ITickableTileEntity, INamedContainerProvider {
@@ -29,6 +31,7 @@ public class NutGrinderTile extends TileEntity implements ITickableTileEntity, I
     private LazyOptional<IItemHandler> handler = LazyOptional.of(this::createHandler);
     public NutGrinderTile(){
         super(NUTGRINDER_TILE);
+
     }
 
     @Override
@@ -87,6 +90,7 @@ public class NutGrinderTile extends TileEntity implements ITickableTileEntity, I
     @Nullable
     @Override
     public Container createMenu(int i, PlayerInventory playerInventory, PlayerEntity playerEntity) {
+        assert world != null;
         return new NutGrinderContainer(i, world, pos, playerInventory, playerEntity);
     }
 }

@@ -22,6 +22,7 @@ public class NutGrinderContainer extends Container {
 
     public NutGrinderContainer(int windowId, World world, BlockPos pos, PlayerInventory playerInventory, PlayerEntity player) {
         super(NUTGRINDER_CONTAINER, windowId);
+        System.out.println("Nut Grinder Container instantiated (NutGrinderContainer.java) (1/2)");
         tileEntity = world.getTileEntity(pos);
         this.playerEntity = player;
         this.playerInventory = new InvWrapper(playerInventory);
@@ -30,7 +31,7 @@ public class NutGrinderContainer extends Container {
             addSlot(new SlotItemHandler(h, 0, 64, 24));
         });
         layoutPlayerInventorySlots(10, 70);
-
+        System.out.println("Nut Grinder Container instantiated (NutGrinderContainer.java) (2/2)");
     }
 
 
