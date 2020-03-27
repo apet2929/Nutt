@@ -24,16 +24,10 @@ import net.minecraftforge.fml.network.NetworkHooks;
 import javax.annotation.Nullable;
 
 
-public class NutGrinder extends Block {
+public class NutGrinder extends NutBlock {
 
     public NutGrinder() {
-        super(Properties.create(Material.IRON)
-                .sound(SoundType.METAL)
-                .hardnessAndResistance(2.0f)
-                .lightValue(14)
-        );
-        setRegistryName("nutgrinder");
-
+        super("nutgrinder", Material.IRON);
     }
 
     @Override
@@ -57,9 +51,7 @@ public class NutGrinder extends Block {
 
     @Override
     public ActionResultType onBlockActivated(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockRayTraceResult result) {
-        if (world.isRemote) {
-            return ActionResultType.SUCCESS;
-        } else {
+        if (!world.isRemote) {
             TileEntity tileEntity = world.getTileEntity(pos);
             if (tileEntity instanceof INamedContainerProvider) {
                 NetworkHooks.openGui((ServerPlayerEntity) player, (INamedContainerProvider) tileEntity, tileEntity.getPos());
@@ -67,6 +59,7 @@ public class NutGrinder extends Block {
 
             return ActionResultType.SUCCESS;
         }
+        else return ActionResultType.SUCCESS;
     }
 
     private static Direction getFacingFromEntity(BlockPos clickedBlock, LivingEntity entity) {

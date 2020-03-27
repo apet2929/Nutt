@@ -1,5 +1,6 @@
 package com.moonjew.nutt.blocks;
 
+import com.moonjew.nutt.reg.ModBlocks;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.container.Container;
@@ -12,7 +13,7 @@ import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
 import net.minecraftforge.items.wrapper.InvWrapper;
 
-import static com.moonjew.nutt.blocks.ModBlocks.NUTGRINDER_CONTAINER;
+import static com.moonjew.nutt.reg.ModBlocks.NUTGRINDER_CONTAINER;
 
 public class NutGrinderContainer extends Container {
 

@@ -1,6 +1,6 @@
 package com.moonjew.nutt.setup;
 
-import com.moonjew.nutt.blocks.ModBlocks;
+import com.moonjew.nutt.reg.ModBlocks;
 import com.moonjew.nutt.blocks.NutGrinderScreen;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScreenManager;

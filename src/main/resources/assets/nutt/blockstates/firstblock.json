@@ -1,5 +1,6 @@
 {
   "variants": {
-    "": { "model": "nutt:block/firstblock" }
+    "": { "model": "nutt:block/firstblock"}
+
   }
 }

@@ -24,7 +24,7 @@ import javax.annotation.Nullable;
 
 
 
-import static com.moonjew.nutt.blocks.ModBlocks.NUTGRINDER_TILE;
+import static com.moonjew.nutt.reg.ModBlocks.NUTGRINDER_TILE;
 
 public class NutGrinderTile extends TileEntity implements ITickableTileEntity, INamedContainerProvider {
 
