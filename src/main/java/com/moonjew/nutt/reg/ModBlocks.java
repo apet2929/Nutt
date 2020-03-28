@@ -3,11 +3,15 @@ package com.moonjew.nutt.reg;
 import com.moonjew.nutt.Nutt;
 import com.moonjew.nutt.blocks.*;
 import net.minecraft.block.Block;
+import net.minecraft.block.FlowingFluidBlock;
 import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.tileentity.TileEntityType;
+import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.ObjectHolder;
+
+
 
 public class ModBlocks {
 
@@ -23,6 +27,9 @@ public class ModBlocks {
     @ObjectHolder("nutt:nutgrinder")
     public static  ContainerType<NutGrinderContainer> NUTGRINDER_CONTAINER;
 
+//    public static RegistryObject<FlowingFluidBlock> nutoilfluid_block = BLOCKS.register("nutoilfluid_flowing", () ->
+//            new FlowingFluidBlock(nutoilfluid, Block.Properties.create(net.minecraft.block.material.Material.WATER).doesNotBlockMovement().hardnessAndResistance(100.0F).noDrops())
+//    );
 
 
 
