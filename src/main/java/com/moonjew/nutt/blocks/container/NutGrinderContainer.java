@@ -1,4 +1,4 @@
-package com.moonjew.nutt.blocks;
+package com.moonjew.nutt.blocks.container;
 
 import com.moonjew.nutt.reg.ModBlocks;
 import net.minecraft.entity.player.PlayerEntity;

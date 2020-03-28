@@ -1,7 +1,8 @@
-package com.moonjew.nutt.blocks;
+package com.moonjew.nutt.blocks.screen;
 
 import com.moonjew.nutt.Nutt;
 import com.mojang.blaze3d.platform.GlStateManager;
+import com.moonjew.nutt.blocks.container.NutGrinderContainer;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.util.ResourceLocation;

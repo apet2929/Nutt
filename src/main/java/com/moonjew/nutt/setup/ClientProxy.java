@@ -1,7 +1,9 @@
 package com.moonjew.nutt.setup;
 
+import com.moonjew.nutt.blocks.screen.NutBreederScreen;
+import com.moonjew.nutt.blocks.screen.NutDryerScreen;
 import com.moonjew.nutt.reg.ModBlocks;
-import com.moonjew.nutt.blocks.NutGrinderScreen;
+import com.moonjew.nutt.blocks.screen.NutGrinderScreen;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.entity.player.PlayerEntity;
@@ -16,6 +18,8 @@ public class ClientProxy implements IProxy{
     @Override
     public void init() {
         ScreenManager.registerFactory(ModBlocks.NUTGRINDER_CONTAINER, NutGrinderScreen::new); //Couples Container to GUI on client
+        ScreenManager.registerFactory(ModBlocks.NUTDRYER_CONTAINER, NutDryerScreen::new); //Couples Container to GUI on client
+        ScreenManager.registerFactory(ModBlocks.NUTBREEDER_CONTAINER, NutBreederScreen::new); //Couples Container to GUI on client
         System.out.println("init() called (ClientProxy.java)");
     }
 

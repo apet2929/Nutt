@@ -2,8 +2,12 @@ package com.moonjew.nutt;
 
 //import com.MoonJew.nutt.blocks.FirstBlockTile;
 //import com.MoonJew.nutt.items.FirstItem;
-import com.moonjew.nutt.blocks.NutGrinderContainer;
-import com.moonjew.nutt.blocks.NutGrinderTile;
+import com.moonjew.nutt.blocks.container.NutBreederContainer;
+import com.moonjew.nutt.blocks.container.NutDryerContainer;
+import com.moonjew.nutt.blocks.container.NutGrinderContainer;
+import com.moonjew.nutt.blocks.tile.NutBreederTile;
+import com.moonjew.nutt.blocks.tile.NutDryerTile;
+import com.moonjew.nutt.blocks.tile.NutGrinderTile;
 import com.moonjew.nutt.reg.ModBlocks;
 import com.moonjew.nutt.reg.Register;
 import com.moonjew.nutt.setup.ClientProxy;
@@ -77,6 +81,8 @@ public class Nutt {
         @SubscribeEvent
         public static void onTileEntityRegistry(final RegistryEvent.Register<TileEntityType<?>> event) {
             event.getRegistry().register(TileEntityType.Builder.create(NutGrinderTile::new, ModBlocks.NUTGRINDER).build(null).setRegistryName("nutgrinder"));
+            event.getRegistry().register(TileEntityType.Builder.create(NutDryerTile::new, ModBlocks.NUTDRYER).build(null).setRegistryName("nutdryer"));
+            event.getRegistry().register(TileEntityType.Builder.create(NutBreederTile::new, ModBlocks.NUTBREEDER).build(null).setRegistryName("nutbreeder"));
         }
 
         @SubscribeEvent
@@ -88,7 +94,20 @@ public class Nutt {
                                 return new NutGrinderContainer(windowId, Nutt.proxy.getClientWorld(), pos, inv, proxy.getClientPlayer());
                             }).setRegistryName("nutgrinder")
             );
-
+            event.getRegistry().register(
+                    IForgeContainerType.create(
+                            (windowId, inv, data) -> {
+                                BlockPos pos = data.readBlockPos();
+                                return new NutDryerContainer(windowId, Nutt.proxy.getClientWorld(), pos, inv, proxy.getClientPlayer());
+                            }).setRegistryName("nutdryer")
+            );
+            event.getRegistry().register(
+                    IForgeContainerType.create(
+                            (windowId, inv, data) -> {
+                                BlockPos pos = data.readBlockPos();
+                                return new NutBreederContainer(windowId, Nutt.proxy.getClientWorld(), pos, inv, proxy.getClientPlayer());
+                            }).setRegistryName("nutbreeder")
+            );
         }
 
 
