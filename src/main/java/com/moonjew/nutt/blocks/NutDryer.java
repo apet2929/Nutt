@@ -14,14 +14,9 @@ import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
 
-public class NutDryer extends Block {
+public class NutDryer extends NutBlock {
     public NutDryer(){
-        super(Properties.create(Material.IRON)
-                .lightValue(12)
-                .hardnessAndResistance(3.0f)
-                .sound(SoundType.LANTERN)
-        );
-        setRegistryName("nutdryer");
+        super("nutdryer", Material.IRON);
 
     }
     @Override

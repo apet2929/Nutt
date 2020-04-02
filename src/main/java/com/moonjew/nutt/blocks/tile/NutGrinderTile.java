@@ -1,10 +1,13 @@
 package com.moonjew.nutt.blocks.tile;
 
 import com.moonjew.nutt.blocks.container.NutGrinderContainer;
+import com.moonjew.nutt.items.NutItem;
+import com.moonjew.nutt.reg.ModItems;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.container.Container;
 import net.minecraft.inventory.container.INamedContainerProvider;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.CompoundNBT;
@@ -60,13 +63,13 @@ public class NutGrinderTile extends TileEntity implements ITickableTileEntity, I
         return new ItemStackHandler(1) {
             @Override
             public boolean isItemValid(int slot, @Nonnull ItemStack stack) {
-                return stack.getItem() == Items.DIAMOND;
+                return stack.getItem() instanceof NutItem;
             }
 
             @Nonnull
             @Override
             public ItemStack insertItem(int slot, @Nonnull ItemStack stack, boolean simulate) {
-                if(stack.getItem() != Items.DIAMOND){
+                if(!(stack.getItem() instanceof NutItem)){
                     return stack;
                 }
                 return super.insertItem(slot, stack, simulate);

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "nutt:random"
+  },
+  "result": "nutt:roasted_nut",
+  "experience": 0.10,
+  "cookingtime": 50
+}

@@ -16,8 +16,10 @@ import com.moonjew.nutt.setup.ModSetup;
 import com.moonjew.nutt.setup.ServerProxy;
 import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.tileentity.TileEntityType;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.common.extensions.IForgeContainerType;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -36,7 +38,7 @@ public class Nutt {
     public static IProxy proxy = DistExecutor.runForDist(() -> () -> new ClientProxy(), () -> () -> new ServerProxy());
     public static ModSetup setup = new ModSetup();
     private static final Logger LOGGER = LogManager.getLogger();
-
+    private ResourceLocation uncookedNutTag = new ResourceLocation(MODID, "uncooked_nut");
     public Nutt() {
         // Register the setup method for mod loading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
@@ -49,6 +51,7 @@ public class Nutt {
     private void setup(final FMLCommonSetupEvent event) {
         setup.init();
         proxy.init();
+
     }
 
     // You can use EventBusSubscriber to automatically subscribe events on the contained class (this is subscribing to the MOD

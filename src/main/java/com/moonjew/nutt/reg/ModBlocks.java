@@ -20,6 +20,7 @@ import net.minecraftforge.registries.ObjectHolder;
 public class ModBlocks {
 
     public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<Block>(ForgeRegistries.BLOCKS, Nutt.MODID);
+
     @ObjectHolder("nutt:firstblock")
     public static final FirstBlock FIRSTBLOCK = new FirstBlock();
 

@@ -1,4 +1,4 @@
-package com.moonjew.nutt.items;
+package com.moonjew.nutt.reg;
 
 import net.minecraft.item.Food;
 import net.minecraft.potion.EffectInstance;
@@ -11,5 +11,5 @@ public class ModFoods {
     public static final Food MACADAMIA = (new Food.Builder()).setAlwaysEdible().hunger(1).saturation(0.4f).effect(new EffectInstance(Effects.INVISIBILITY, 100, 1), 1.0f).build();
     public static final Food CASHEW = (new Food.Builder()).setAlwaysEdible().hunger(1).saturation(0.4f).effect(new EffectInstance(Effects.HASTE, 100, 1), 1.0f).build();
     public static final Food ALMOND = (new Food.Builder()).setAlwaysEdible().hunger(1).saturation(0.4f).effect(new EffectInstance(Effects.FIRE_RESISTANCE, 100, 1), 1.0f).build();
-    
+    public static final Food ROASTED_NUT = (new Food.Builder()).setAlwaysEdible().hunger(2).saturation(6.0f).build();
 }

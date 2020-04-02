@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "nutt:almond_nut",
+    "nutt:peanut_nut",
+    "nutt:macadamia_nut",
+    "nutt:cashew_nut",
+    "nutt:pistachio_nut"
+  ]
+}
