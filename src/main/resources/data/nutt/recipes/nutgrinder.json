@@ -2,15 +2,12 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "###",
-    " X ",
+    " # ",
     "###"
   ],
   "key": {
     "#": {
       "item": "minecraft:cobblestone"
-    },
-    "X": {
-      "tag": "minecraft:planks"
     }
   },
   "result": {

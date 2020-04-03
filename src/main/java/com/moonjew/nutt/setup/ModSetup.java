@@ -4,6 +4,7 @@ import com.moonjew.nutt.reg.ModItems;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModSetup {
     public static final NonNullList<ItemStack> extraItemGroupItems = NonNullList.create();
@@ -22,6 +23,7 @@ public class ModSetup {
     };
 
     public void init() {
+
         System.out.println("init() called (ModSetup.java)");
     }
 }
