@@ -44,6 +44,8 @@ public class ModBlocks {
     public static TileEntityType<NutBreederTile> NUTBREEDER_TILE;
     @ObjectHolder("nutt:nutbreeder")
     public static ContainerType<NutBreederContainer> NUTBREEDER_CONTAINER;
+    @ObjectHolder("nutt:teleporter")
+    public static TeleporterBlock TELEPORTER_BLOCK = new TeleporterBlock();
 
 
 
