@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "age=0": { "model": "block/macadamias_stage0" },
+    "age=1": { "model": "block/macadamias_stage0" },
+    "age=2": { "model": "block/macadamias_stage1" },
+    "age=3": { "model": "block/macadamias_stage1" },
+    "age=4": { "model": "block/macadamias_stage2" },
+    "age=5": { "model": "block/macadamias_stage2" },
+    "age=6": { "model": "block/macadamias_stage2" },
+    "age=7": { "model": "block/macadamias_stage3" }
+  }
+}

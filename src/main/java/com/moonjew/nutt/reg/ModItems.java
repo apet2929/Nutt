@@ -1,8 +1,9 @@
 package com.moonjew.nutt.reg;
 
 import com.moonjew.nutt.Nutt;
-import com.moonjew.nutt.items.CrushedNuts;
-import com.moonjew.nutt.items.NutItem;
+import com.moonjew.nutt.items.*;
+import com.moonjew.nutt.items.penisite.PenisitePickaxe;
+import com.moonjew.nutt.items.penisite.PenisiteSword;
 import net.minecraft.item.Item;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -14,6 +15,12 @@ public class ModItems {
 
     public static final DeferredRegister<Item> ITEMS = new DeferredRegister<Item>(ForgeRegistries.ITEMS, Nutt.MODID);
 
+    @ObjectHolder("nutt:firstitem")
+    public static final FirstItem FIRSTITEM = new FirstItem();
+    @ObjectHolder("nutt:penisite_sword")
+    public static final PenisiteSword PENISITE_SWORD = new PenisiteSword("penisite_sword");
+    @ObjectHolder("nutt:penisite_pickaxe")
+    public static final PenisitePickaxe PENISITE_PICKAXE = new PenisitePickaxe("penisite_pickaxe");
     @ObjectHolder("nutt:almond_nut")
     public static final NutItem ALMOND = new NutItem("almond_nut", ModFoods.ALMOND);
     @ObjectHolder("nutt:pistachio_nut")
@@ -29,6 +36,6 @@ public class ModItems {
     public static CrushedNuts CRUSHED_NUTS = new CrushedNuts("crushed_nuts");
 
     @ObjectHolder("nutt:roasted_nut")
-    public static NutItem ROASTED_NUT = new NutItem("roasted_nut", ModFoods.ROASTED_NUT);
+    public static RoastedNut ROASTED_NUT = new RoastedNut("roasted_nut", ModFoods.ROASTED_NUT);
 
 }

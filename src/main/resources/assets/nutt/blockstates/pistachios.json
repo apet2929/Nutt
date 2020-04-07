@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "age=0": { "model": "block/pistachios_stage0" },
+    "age=1": { "model": "block/pistachios_stage0" },
+    "age=2": { "model": "block/pistachios_stage1" },
+    "age=3": { "model": "block/pistachios_stage1" },
+    "age=4": { "model": "block/pistachios_stage2" },
+    "age=5": { "model": "block/pistachios_stage2" },
+    "age=6": { "model": "block/pistachios_stage2" },
+    "age=7": { "model": "block/pistachios_stage3" }
+  }
+}
