@@ -10,6 +10,8 @@
   "item.nutt.crushed_nuts": "Crushed Nuts",
   "item.nutt.roasted_nut": "Roasted Nut",
   "item.nutt.penisite_sword": "Penisite Sword",
+  "block.nutt.teleporter": "Teleporter",
+  "block.nutt.home": "Home Block",
 
   "_comment": "Creative Tabs",
   "itemGroup.nuttItemGroup": "Nutt"

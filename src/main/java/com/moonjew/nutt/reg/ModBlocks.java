@@ -45,7 +45,9 @@ public class ModBlocks {
     @ObjectHolder("nutt:nutbreeder")
     public static ContainerType<NutBreederContainer> NUTBREEDER_CONTAINER;
     @ObjectHolder("nutt:teleporter")
-    public static TeleporterBlock TELEPORTER_BLOCK = new TeleporterBlock();
+    public static TeleporterBlock TELEPORTER = new TeleporterBlock();
+    @ObjectHolder("nutt:home")
+    public static HomeBlock HOME = new HomeBlock();
 
 
 
