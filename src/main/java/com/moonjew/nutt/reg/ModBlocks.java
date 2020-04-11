@@ -9,6 +9,8 @@ import com.moonjew.nutt.blocks.tile.NutBreederTile;
 import com.moonjew.nutt.blocks.tile.NutDryerTile;
 import com.moonjew.nutt.blocks.tile.NutGrinderTile;
 import net.minecraft.block.Block;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.material.Material;
 import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.registries.DeferredRegister;
@@ -49,9 +51,8 @@ public class ModBlocks {
     @ObjectHolder("nutt:home")
     public static HomeBlock HOME = new HomeBlock();
 
-
-
-
+    @ObjectHolder("nutt:testcrop")
+    public static NutCropBlock TESTCROP = new NutCropBlock(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().hardnessAndResistance(0.0f).sound(SoundType.CROP), "testcrop");
 
 }
 

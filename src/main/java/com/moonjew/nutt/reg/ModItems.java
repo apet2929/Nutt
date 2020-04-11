@@ -36,4 +36,6 @@ public class ModItems {
     @ObjectHolder("nutt:roasted_nut")
     public static RoastedNut ROASTED_NUT = new RoastedNut("roasted_nut", ModFoods.ROASTED_NUT);
 
+    @ObjectHolder("nutt:testseed")
+    public static NutSeed TESTSEED = new NutSeed(ModBlocks.TESTCROP, "testseed");
 }
