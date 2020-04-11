@@ -117,7 +117,7 @@ public class NutOilFluid
     public static RegistryObject<FlowingFluid> nutoilfluid = FLUIDS.register("nutoilfluid", () ->
             new ForgeFlowingFluid.Source(NutOilFluid.nutoilfluid_properties)
     );
-    public static RegistryObject<FlowingFluid> nutoilfluid_flowing = FLUIDS.register("test_fluid_flowing", () ->
+    public static RegistryObject<FlowingFluid> nutoilfluid_flowing = FLUIDS.register("nutoilfluid_flowing", () ->
             new ForgeFlowingFluid.Flowing(NutOilFluid.nutoilfluid_properties)
     );
 

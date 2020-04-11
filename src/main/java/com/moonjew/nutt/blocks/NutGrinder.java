@@ -27,7 +27,7 @@ import javax.annotation.Nullable;
 public class NutGrinder extends NutBlock {
 
     public NutGrinder() {
-        super("nutgrinder", Material.IRON);
+        super(Material.IRON);
     }
 
     @Override

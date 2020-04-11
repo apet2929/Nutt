@@ -1,7 +1,6 @@
 package com.moonjew.nutt.blocks.tile;
 
 import com.moonjew.nutt.blocks.container.NutBreederContainer;
-
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.container.Container;
@@ -24,15 +23,14 @@ import net.minecraftforge.items.ItemStackHandler;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
-import static com.moonjew.nutt.reg.ModBlocks.NUTBREEDER_TILE;
-
+import static com.moonjew.nutt.reg.ModTileEntityTypes.NUTBREEDER_TILE;
 
 
 public class NutBreederTile extends TileEntity implements ITickableTileEntity, INamedContainerProvider {
 
     private LazyOptional<IItemHandler> handler = LazyOptional.of(this::createHandler);
     public NutBreederTile(){
-        super(NUTBREEDER_TILE);
+        super(NUTBREEDER_TILE.get());
 
     }
 

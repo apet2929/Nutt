@@ -4,14 +4,13 @@ import com.moonjew.nutt.reg.ModItems;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModSetup {
     public static final NonNullList<ItemStack> extraItemGroupItems = NonNullList.create();
     public static final ItemGroup itemGroup = new ItemGroup("nuttItemGroup"){
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(ModItems.PEANUT_NUT);
+            return new ItemStack(ModItems.PEANUT_NUT.get());
         }
 
         @Override

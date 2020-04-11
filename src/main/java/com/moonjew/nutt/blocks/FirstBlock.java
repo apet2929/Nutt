@@ -4,6 +4,6 @@ import net.minecraft.block.material.Material;
 
 public class FirstBlock extends NutBlock {
     public FirstBlock() {
-        super("firstblock", Material.IRON);
+        super(Material.IRON);
     }
 }

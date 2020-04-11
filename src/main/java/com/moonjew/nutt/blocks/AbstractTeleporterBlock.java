@@ -1,7 +1,5 @@
 package com.moonjew.nutt.blocks;
 
-import com.moonjew.nutt.items.NutBlockItem;
-import com.moonjew.nutt.reg.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.util.math.BlockPos;
 
@@ -11,8 +9,6 @@ public class AbstractTeleporterBlock extends Block {
 
     public AbstractTeleporterBlock(Block.Properties properties, String name) {
         super(properties);
-        ModBlocks.BLOCKS.register(name, () -> this);
-        NutBlockItem ITEM = new NutBlockItem(this, name);
         System.out.println("AbstractTeleporterBlock instantiated (HomeBlock.java)");
     }
 

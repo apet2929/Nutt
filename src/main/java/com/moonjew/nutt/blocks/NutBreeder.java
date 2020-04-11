@@ -25,15 +25,15 @@ import net.minecraftforge.fml.network.NetworkHooks;
 import javax.annotation.Nullable;
 
 public class NutBreeder extends NutBlock {
+
     public NutBreeder() {
-        super("nutbreeder", Material.IRON);
+        super(Material.IRON);
     }
 
     @Override
     public boolean hasTileEntity(BlockState state) {
         return true;
     }
-
 
     @Nullable
     @Override

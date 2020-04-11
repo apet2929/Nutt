@@ -1,13 +1,11 @@
 package com.moonjew.nutt.blocks.tile;
 
 import com.moonjew.nutt.blocks.container.NutDryerContainer;
-import com.moonjew.nutt.reg.ModItems;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.container.Container;
 import net.minecraft.inventory.container.INamedContainerProvider;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.tileentity.ITickableTileEntity;
 import net.minecraft.tileentity.TileEntity;
@@ -20,17 +18,18 @@ import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
+
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
-import static com.moonjew.nutt.reg.ModBlocks.NUTDRYER_TILE;
+import static com.moonjew.nutt.reg.ModTileEntityTypes.NUTDRYER_TILE;
 
 
 public class NutDryerTile extends TileEntity implements ITickableTileEntity, INamedContainerProvider {
 
     private LazyOptional<IItemHandler> handler = LazyOptional.of(this::createHandler);
     public NutDryerTile(){
-        super(NUTDRYER_TILE);
+        super(NUTDRYER_TILE.get());
 
     }
 

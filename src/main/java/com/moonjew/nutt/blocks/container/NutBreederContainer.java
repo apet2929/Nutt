@@ -13,8 +13,7 @@ import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
 import net.minecraftforge.items.wrapper.InvWrapper;
 
-import static com.moonjew.nutt.reg.ModBlocks.NUTBREEDER_CONTAINER;
-
+import static com.moonjew.nutt.reg.ModContainerTypes.NUTBREEDER_CONTAINER;
 
 
 public class NutBreederContainer extends Container {
@@ -25,7 +24,7 @@ public class NutBreederContainer extends Container {
     private IItemHandler playerInventory;
 
     public NutBreederContainer(int windowId, World world, BlockPos pos, PlayerInventory playerInventory, PlayerEntity player) {
-        super(NUTBREEDER_CONTAINER, windowId);
+        super(NUTBREEDER_CONTAINER.get(), windowId);
         System.out.println("Nut Breeder Container instantiated (NutBreederContainer.java) (1/2)");
         tileEntity = world.getTileEntity(pos);
         this.playerEntity = player;
@@ -41,7 +40,7 @@ public class NutBreederContainer extends Container {
 
     @Override
     public boolean canInteractWith(PlayerEntity playerIn) {
-        return isWithinUsableDistance(IWorldPosCallable.of(tileEntity.getWorld(), tileEntity.getPos()), playerEntity, ModBlocks.NUTBREEDER);
+        return isWithinUsableDistance(IWorldPosCallable.of(tileEntity.getWorld(), tileEntity.getPos()), playerEntity, ModBlocks.NUTBREEDER.get());
     }
 
     private int addSlotRange(IItemHandler handler, int index, int x, int y, int amount, int dx) {

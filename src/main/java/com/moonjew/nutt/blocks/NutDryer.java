@@ -2,7 +2,6 @@ package com.moonjew.nutt.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
@@ -16,9 +15,9 @@ import javax.annotation.Nullable;
 
 public class NutDryer extends NutBlock {
     public NutDryer(){
-        super("nutdryer", Material.IRON);
-
+        super(Material.IRON);
     }
+
     @Override
     public void onBlockPlacedBy(World world, BlockPos pos, BlockState state, @Nullable LivingEntity entity, ItemStack stack){
         if(entity != null){

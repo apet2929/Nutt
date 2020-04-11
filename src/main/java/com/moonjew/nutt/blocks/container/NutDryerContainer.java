@@ -4,7 +4,6 @@ import com.moonjew.nutt.reg.ModBlocks;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.container.Container;
-import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IWorldPosCallable;
 import net.minecraft.util.math.BlockPos;
@@ -14,7 +13,7 @@ import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
 import net.minecraftforge.items.wrapper.InvWrapper;
 
-import static com.moonjew.nutt.reg.ModBlocks.NUTDRYER_CONTAINER;
+import static com.moonjew.nutt.reg.ModContainerTypes.NUTDRYER_CONTAINER;
 
 
 public class NutDryerContainer extends Container {
@@ -24,7 +23,7 @@ public class NutDryerContainer extends Container {
     private IItemHandler playerInventory;
 
     public NutDryerContainer(int windowId, World world, BlockPos pos, PlayerInventory playerInventory, PlayerEntity player) {
-        super(NUTDRYER_CONTAINER, windowId);
+        super(NUTDRYER_CONTAINER.get(), windowId);
         System.out.println("Nut Dryer Container instantiated (NutDryerContainer.java) (1/2)");
         tileEntity = world.getTileEntity(pos);
         this.playerEntity = player;
@@ -40,7 +39,7 @@ public class NutDryerContainer extends Container {
 
     @Override
     public boolean canInteractWith(PlayerEntity playerIn) {
-        return isWithinUsableDistance(IWorldPosCallable.of(tileEntity.getWorld(), tileEntity.getPos()), playerEntity, ModBlocks.NUTDRYER);
+        return isWithinUsableDistance(IWorldPosCallable.of(tileEntity.getWorld(), tileEntity.getPos()), playerEntity, ModBlocks.NUTDRYER.get());
     }
 
     private int addSlotRange(IItemHandler handler, int index, int x, int y, int amount, int dx) {

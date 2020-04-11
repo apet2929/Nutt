@@ -2,14 +2,11 @@ package com.moonjew.nutt.blocks.tile;
 
 import com.moonjew.nutt.blocks.container.NutGrinderContainer;
 import com.moonjew.nutt.items.NutItem;
-import com.moonjew.nutt.reg.ModItems;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.container.Container;
 import net.minecraft.inventory.container.INamedContainerProvider;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.tileentity.ITickableTileEntity;
 import net.minecraft.tileentity.TileEntity;
@@ -26,15 +23,13 @@ import net.minecraftforge.items.ItemStackHandler;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
-
-
-import static com.moonjew.nutt.reg.ModBlocks.NUTGRINDER_TILE;
+import static com.moonjew.nutt.reg.ModTileEntityTypes.NUTGRINDER_TILE;
 
 public class NutGrinderTile extends TileEntity implements ITickableTileEntity, INamedContainerProvider {
 
     private LazyOptional<IItemHandler> handler = LazyOptional.of(this::createHandler);
     public NutGrinderTile(){
-        super(NUTGRINDER_TILE);
+        super(NUTGRINDER_TILE.get());
 
     }
 

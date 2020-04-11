@@ -2,20 +2,10 @@ package com.moonjew.nutt.reg;
 
 import com.moonjew.nutt.Nutt;
 import com.moonjew.nutt.blocks.*;
-import com.moonjew.nutt.blocks.container.NutBreederContainer;
-import com.moonjew.nutt.blocks.container.NutDryerContainer;
-import com.moonjew.nutt.blocks.container.NutGrinderContainer;
-import com.moonjew.nutt.blocks.tile.NutBreederTile;
-import com.moonjew.nutt.blocks.tile.NutDryerTile;
-import com.moonjew.nutt.blocks.tile.NutGrinderTile;
 import net.minecraft.block.Block;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.material.Material;
-import net.minecraft.inventory.container.ContainerType;
-import net.minecraft.tileentity.TileEntityType;
+import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.ObjectHolder;
 
 
 
@@ -23,36 +13,13 @@ public class ModBlocks {
 
     public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<Block>(ForgeRegistries.BLOCKS, Nutt.MODID);
 
-    @ObjectHolder("nutt:firstblock")
-    public static final FirstBlock FIRSTBLOCK = new FirstBlock();
+    public static final RegistryObject<Block> FIRSTBLOCK = BLOCKS.register("firstblock", FirstBlock::new);
 
-    @ObjectHolder("nutt:nutgrinder")
-    public static final NutGrinder NUTGRINDER = new NutGrinder();
-    @ObjectHolder("nutt:nutgrinder")
-    public static TileEntityType<NutGrinderTile> NUTGRINDER_TILE;
-    @ObjectHolder("nutt:nutgrinder")
-    public static  ContainerType<NutGrinderContainer> NUTGRINDER_CONTAINER;
-
-    @ObjectHolder("nutt:nutdryer")
-    public static final NutDryer NUTDRYER = new NutDryer();
-    @ObjectHolder("nutt:nutdryer")
-    public static TileEntityType<NutDryerTile> NUTDRYER_TILE;
-    @ObjectHolder("nutt:nutdryer")
-    public static ContainerType<NutDryerContainer> NUTDRYER_CONTAINER;
-
-    @ObjectHolder("nutt:nutbreeder")
-    public static final NutBreeder NUTBREEDER = new NutBreeder();
-    @ObjectHolder("nutt:nutbreeder")
-    public static TileEntityType<NutBreederTile> NUTBREEDER_TILE;
-    @ObjectHolder("nutt:nutbreeder")
-    public static ContainerType<NutBreederContainer> NUTBREEDER_CONTAINER;
-    @ObjectHolder("nutt:teleporter")
-    public static TeleporterBlock TELEPORTER = new TeleporterBlock();
-    @ObjectHolder("nutt:home")
-    public static HomeBlock HOME = new HomeBlock();
-
-    @ObjectHolder("nutt:testcrop")
-    public static NutCropBlock TESTCROP = new NutCropBlock(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().hardnessAndResistance(0.0f).sound(SoundType.CROP), "testcrop");
+    public static final RegistryObject<Block> NUTGRINDER = BLOCKS.register("nutgrinder", NutGrinder::new);
+    public static final RegistryObject<Block> NUTDRYER = BLOCKS.register("nutdryer", NutDryer::new);
+    public static final RegistryObject<Block> NUTBREEDER = BLOCKS.register("nutbreeder", NutBreeder::new);
+    public static final RegistryObject<Block> TELEPORTER = BLOCKS.register("teleporter", TeleporterBlock::new);
+    public static final RegistryObject<Block> HOME = BLOCKS.register("home", HomeBlock::new);
 
 }
 

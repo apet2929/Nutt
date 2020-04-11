@@ -8,7 +8,6 @@ import net.minecraft.inventory.container.Container;
 import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.inventory.container.Slot;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IWorldPosCallable;
 import net.minecraft.util.math.BlockPos;
@@ -18,7 +17,7 @@ import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
 import net.minecraftforge.items.wrapper.InvWrapper;
 
-import static com.moonjew.nutt.reg.ModBlocks.NUTGRINDER_CONTAINER;
+import static com.moonjew.nutt.reg.ModContainerTypes.NUTGRINDER_CONTAINER;
 
 public class NutGrinderContainer extends Container {
 
@@ -27,7 +26,7 @@ public class NutGrinderContainer extends Container {
     private IItemHandler playerInventory;
 
     public NutGrinderContainer(int windowId, World world, BlockPos pos, PlayerInventory playerInventory, PlayerEntity player) {
-        super(NUTGRINDER_CONTAINER, windowId);
+        super(NUTGRINDER_CONTAINER.get(), windowId);
         System.out.println("Nut Grinder Container instantiated (NutGrinderContainer.java) (1/2)");
         tileEntity = world.getTileEntity(pos);
         this.playerEntity = player;
@@ -42,12 +41,12 @@ public class NutGrinderContainer extends Container {
 
     @Override
     public ContainerType<NutGrinderContainer> getType(){
-        return NUTGRINDER_CONTAINER;
+        return NUTGRINDER_CONTAINER.get();
     }
 
     @Override
     public boolean canInteractWith(PlayerEntity playerIn) {
-        return isWithinUsableDistance(IWorldPosCallable.of(tileEntity.getWorld(), tileEntity.getPos()), playerEntity, ModBlocks.NUTGRINDER);
+        return isWithinUsableDistance(IWorldPosCallable.of(tileEntity.getWorld(), tileEntity.getPos()), playerEntity, ModBlocks.NUTGRINDER.get());
     }
 
     private int addSlotRange(IItemHandler handler, int index, int x, int y, int amount, int dx) {
