@@ -1,8 +1,8 @@
 package com.moonjew.nutt.setup;
 
+import com.moonjew.nutt.reg.ModItems;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.util.NonNullList;
 
 public class ModSetup {
@@ -10,7 +10,7 @@ public class ModSetup {
     public static final ItemGroup itemGroup = new ItemGroup("nuttItemGroup"){
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(Items.DIAMOND);
+            return new ItemStack(ModItems.PEANUT_NUT.get());
         }
 
         @Override

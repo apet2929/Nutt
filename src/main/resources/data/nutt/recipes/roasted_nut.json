@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "tag": "nutt:foo/uncooked_nut"
+  },
+  "result": "nutt:roasted_nut",
+  "experience": 0.35,
+  "cookingtime": 200
+}
