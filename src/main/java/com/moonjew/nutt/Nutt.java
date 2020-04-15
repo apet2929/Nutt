@@ -1,15 +1,19 @@
 package com.moonjew.nutt;
 
 
+import com.moonjew.nutt.reg.ModBlocks;
 import com.moonjew.nutt.reg.Register;
 import com.moonjew.nutt.setup.ClientProxy;
 import com.moonjew.nutt.setup.IProxy;
 import com.moonjew.nutt.setup.ModSetup;
 import com.moonjew.nutt.setup.ServerProxy;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
@@ -28,12 +32,18 @@ public class Nutt {
     public Nutt() {
         // Register the setup method for mod loading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
         Register.register();
 
         MinecraftForge.EVENT_BUS.register(this);
     }
+    private void doClientStuff(final FMLClientSetupEvent event)
+    {
+        // do something that can only be done on the client
+        RenderTypeLookup.setRenderLayer(ModBlocks.TEST_CROP.get(), RenderType.cutout());
 
+    }
     private void setup(final FMLCommonSetupEvent event) {
         setup.init();
         proxy.init();

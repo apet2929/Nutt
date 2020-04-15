@@ -1,12 +1,12 @@
 {
   "variants": {
-    "age=0": { "model": "block/peanutPlant0" },
-    "age=1": { "model": "block/peanutPlant1" },
-    "age=2": { "model": "block/peanutPlant2" },
-    "age=3": { "model": "block/peanutPlant3" },
-    "age=4": { "model": "block/peanutPlant4" },
-    "age=5": { "model": "block/peanutPlant5" },
-    "age=6": { "model": "block/peanutPlant6" },
-    "age=7": { "model": "block/peanutPlant6" }
+    "age=0": { "model": "nutt:block/testcrop0" },
+    "age=1": { "model": "nutt:block/testcrop1" },
+    "age=2": { "model": "nutt:block/testcrop2" },
+    "age=3": { "model": "nutt:block/testcrop3" },
+    "age=4": { "model": "nutt:block/testcrop4" },
+    "age=5": { "model": "nutt:block/testcrop5" },
+    "age=6": { "model": "nutt:block/testcrop6" },
+    "age=7": { "model": "nutt:block/testcrop7" }
   }
 }
