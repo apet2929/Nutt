@@ -1,6 +1,6 @@
 {
   "parent": "block/crop",
   "textures": {
-    "crop": "block/peanutPlant_0"
+    "crop": "nutt:block/almond_crop7"
   }
 }
