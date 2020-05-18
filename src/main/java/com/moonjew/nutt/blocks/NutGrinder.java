@@ -35,7 +35,6 @@ public class NutGrinder extends NutBlock {
         return true;
     }
 
-
     @Nullable
     @Override
     public TileEntity createTileEntity(BlockState state, IBlockReader world) {
@@ -56,10 +55,8 @@ public class NutGrinder extends NutBlock {
             if (tileEntity instanceof INamedContainerProvider) {
                 NetworkHooks.openGui((ServerPlayerEntity) player, (INamedContainerProvider) tileEntity, tileEntity.getPos());
             }
-
-            return ActionResultType.SUCCESS;
         }
-        else return ActionResultType.SUCCESS;
+        return ActionResultType.SUCCESS;
     }
 
     private static Direction getFacingFromEntity(BlockPos clickedBlock, LivingEntity entity) {
@@ -70,4 +67,5 @@ public class NutGrinder extends NutBlock {
     protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
         builder.add(BlockStateProperties.FACING);
     }
+    
 }

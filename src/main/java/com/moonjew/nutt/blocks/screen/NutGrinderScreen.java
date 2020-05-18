@@ -3,6 +3,7 @@ package com.moonjew.nutt.blocks.screen;
 import com.moonjew.nutt.Nutt;
 import com.mojang.blaze3d.platform.GlStateManager;
 import com.moonjew.nutt.blocks.container.NutGrinderContainer;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.util.ResourceLocation;
@@ -10,7 +11,7 @@ import net.minecraft.util.text.ITextComponent;
 
 public class NutGrinderScreen extends ContainerScreen<NutGrinderContainer> {
 
-    private ResourceLocation GUI = new ResourceLocation(Nutt.MODID ,"textures/gui/nutgrinder_gui.png");
+    private final ResourceLocation GUI = new ResourceLocation(Nutt.MODID ,"textures/gui/nutgrinder_gui.png");
 
     public NutGrinderScreen(NutGrinderContainer container, PlayerInventory inv, ITextComponent name) {
         super(container, inv, name);
@@ -28,7 +29,7 @@ public class NutGrinderScreen extends ContainerScreen<NutGrinderContainer> {
      * Draw the foreground layer for the GuiContainer (everything in front of the items)
      */
     protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-
+        drawString(Minecraft.getInstance().fontRenderer, "Nut Oil: " + container.getEnergy(), 10, 10, 0xffffff);
     }
 
     /**
